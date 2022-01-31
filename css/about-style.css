@@ -1,0 +1,141 @@
+/* CSS Styles */
+
+body {
+    background-color: #1e1e1e;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.about-title {
+    animation-delay: 1s;
+    height: 40vh;
+    width: 50vw;
+    position: relative;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+
+    animation: 0.75s ease-out 0s 1 slideFromTop;
+}
+
+.about-paragraph1 {
+    width: 100vw;
+    height: 200vh;
+}
+
+.textbox-left {
+    color: white;
+}
+
+.textbox-right {
+    color: white;
+}
+
+.about-title-text {
+    color: white;
+    font-family: "Roboto";
+    font-size: 70px;
+    font-weight: 100;
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.background-header {
+    background-image: url("Assets/Homepage/blurcode_bg.png");
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    position: fixed;
+    
+    justify-content: center;
+    animation: 0.5s ease-out 0s 1 fadeIn;
+}
+
+.text-container {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    top: 60vh;
+    width: 100vw;
+    height: 200vh;
+    background-color: #1e1e1e;
+}
+
+.text-header1 {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 36px;
+    float:center;
+}
+
+#header1-1 {
+    animation: 0.5s ease-out 0s 1 softSlideFromBottom;
+}
+
+/*  Animations */
+
+.navbar-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromTop {
+
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes softSlideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

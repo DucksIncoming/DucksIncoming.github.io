@@ -1,0 +1,90 @@
+/* CSS Styles */
+
+body {
+    background-color: #1e1e1e;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.about-title {
+    animation-delay: 1s;
+    height: 40vh;
+    width: 50vw;
+    position: relative;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+
+    animation: 0.75s ease-out 0s 1 slideFromTop;
+}
+
+.about-paragraph1 {
+    width: 100vw;
+    height: 200vh;
+}
+
+.textbox-left {
+    color: white;
+}
+
+.textbox-right {
+    color: white;
+}
+
+.about-title-text {
+    color: white;
+    font-family: "Roboto";
+    font-size: 70px;
+    font-weight: 100;
+    margin-top: 20vh;
+    text-align: center;
+}
+
+.background-header {
+    background-image: url("Assets/Homepage/blurcode_bg.png");
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    position: fixed;
+    
+    justify-content: center;
+    animation: 0.5s ease-out 0s 1 fadeIn;
+}
+
+.text-container {
+    position: absolute;
+    top: 60vh;
+    width: 100vw;
+    height: 200vh;
+    background-color: #1e1e1e;
+}
+
+.link-container {
+    width: 100vw;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.link-label {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+
+.link-text {
+    color: aquamarine;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    position: relative;
+}
