@@ -38,12 +38,159 @@ body {
     width: 45px;
     height: 38px;
     position: absolute;
-    top: 0.5vw;
-    left: 0.5vw;
+    top: 10px;
+    left: 10px;
     transform: rotate(0deg);
     transition-duration: 0.25s;
 
     animation: 1.5s ease-out 0s slideFromRight;
+}
+
+.navbar-container {
+    width: 250px;
+    height: 350px;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.home-text {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 75px;
+}
+
+.about-text {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    top: 70px;
+    left: 75px;
+}
+
+.projects-text {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    top: 140;
+    left: 75px;
+}
+
+.links-text {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    top: 210;
+    left: 75px;
+}
+
+.contact-text {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 24px;
+    position: absolute;
+    top: 100;
+    left: 75px;
+}
+
+.home-button {
+    width: 250px;
+    height: 70px;
+    background-color: #1e1e1e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.about-button {
+    width: 250px;
+    height: 70px;
+    background-color: #1e1e1e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.projects-button {
+    width: 250px;
+    height: 70px;
+    background-color: #1e1e1e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.links-button {
+    width: 250px;
+    height: 70px;
+    background-color: #1e1e1e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.contact-button {
+    width: 250px;
+    height: 70px;
+    background-color: #1e1e1e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #414141;
+}
+.about-button:hover {
+    background-color: #414141;
+}
+.projects-button:hover {
+    background-color: #414141;
+}
+.links-button:hover {
+    background-color: #414141;
+}
+.contact-button:hover {
+    background-color: #414141;
+}
+
+.home-icon {
+    width: 60px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.about-icon {
+    width: 60px;
+    position: absolute;
+    top: 75px;
+    left: 5px;
+}
+
+.projects-icon {
+    width: 60px;
+    position: absolute;
+    top: 145px;
+    left: 5px;
+}
+
+.links-icon {
+    width: 60px;
+    position: absolute;
+    top: 215px;
+    left: 5px;
+}
+
+.contact-icon {
+    width: 60px;
+    position: absolute;
+    top: 295px;
+    left: 5px;
 }
 
 /*  Animations */
