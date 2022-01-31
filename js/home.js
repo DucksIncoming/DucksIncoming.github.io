@@ -18,3 +18,23 @@ function navbarClose() {
     navIcon.style.transitionDuration = "0.25s";
     navIcon.style.transform = "rotate(0deg)";
 }
+
+function openHome() {
+    window.open("home.html", "_self");
+}
+
+function openAbout() {
+    window.open("about.html", "_self");
+}
+
+function openProjects() {
+    window.open("projects.html", "_self");
+}
+
+function openLinks() {
+    window.open("links.html", "_self");
+}
+
+function openContact() {
+    window.open("contact.html", "_self");
+}
