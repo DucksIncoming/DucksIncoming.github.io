@@ -1,0 +1,92 @@
+/* CSS Styles */
+
+body {
+    background-color: #1e1e1e;
+    margin: 0;
+    overflow: hidden;
+}
+
+.logo {
+    animation-delay: 1s;
+    height: 50vh;
+    position: relative;
+    margin-top: 20vh;
+
+    animation: 0.75s ease-out 0s 1 slideFromTop;
+}
+
+.background-header {
+    background-image: url("Assets/Homepage/blurcode_bg.png");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /*animation: 0.5s ease-out 0s 1 fadeIn;*/
+}
+
+.logo {
+    animation-delay: 1s;
+    height: 50vh;
+    position: relative;
+    margin-top: 20vh;
+
+    animation: 0.75s ease-out 0s 1 slideFromTop;
+}
+
+.navbar-icon {
+    background-image: url("Assets/Global/navbar_icon.png");
+    background-size: 45px 38px;
+    width: 45px;
+    height: 38px;
+    position: absolute;
+    top: 0.5vw;
+    left: 0.5vw;
+    transform: rotate(0deg);
+    transition-duration: 0.25s;
+
+    animation: 1.5s ease-out 0s slideFromRight;
+}
+
+/*  Animations */
+
+.navbar-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromTop {
+
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
