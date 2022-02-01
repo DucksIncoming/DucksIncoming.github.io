@@ -90,3 +90,11 @@ function openLinks() {
 function openContact() {
     window.open("contact.html", "_self");
 }
+
+function buttonWipe(button){
+    wipePercent = 0;
+    while (button.style.background != "linear-gradient(90deg, rgba(30,30,30,1) 100%, rgba(30, 30, 30, 0 ) 100%)"){
+        button.style.background = "linear-gradient(90deg, rgba(30,30,30,1)" + wipePercent.toString() + "%, rgba(30, 30, 30, 0 ) 100" + wipePercent.toString() + "%)";
+        wipePercent += 1
+    }
+}

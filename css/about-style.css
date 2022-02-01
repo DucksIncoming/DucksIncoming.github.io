@@ -5,6 +5,15 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
+    perspective-origin: 50%;
+}
+
+.background-graphic {
+    background-image: url("Assets/Homepage/blurcode_bg.png");
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
 }
 
 .about-title {
@@ -15,6 +24,7 @@ body {
     margin-top: 5vh;
     display: flex;
     justify-content: center;
+    perspective: 10px;
 
     animation: 0.75s ease-out 0s 1 slideFromTop;
 }
@@ -26,10 +36,26 @@ body {
 
 .textbox-left {
     color: white;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    width: 30vw;
+}
+
+.text-normal {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
 }
 
 .textbox-right {
     color: white;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    width: 30vw;
+    text-align: right;
 }
 
 .about-title-text {
@@ -42,25 +68,47 @@ body {
 }
 
 .background-header {
-    background-image: url("Assets/Homepage/blurcode_bg.png");
     height: 100vh;
     width: 100vw;
     margin: auto;
     display: flex;
-    position: fixed;
+    position: absolute;
     
     justify-content: center;
     animation: 0.5s ease-out 0s 1 fadeIn;
 }
 
-.text-container {
-    position: absolute;
-    display:flex;
-    justify-content: center;
-    top: 60vh;
+.title-container {
     width: 100vw;
-    height: 200vh;
+    height: 20vh;
+    top: 60%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.left-text-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 70%;
+    width: 30%;
+    margin-left: 10vw;
     background-color: #1e1e1e;
+
+    animation: 1s ease-out 0s 1 leftParagraphFade;
+}
+
+.right-text-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    right: 10vw;
+    top: 120%;
+    background-color: #1e1e1e;
+
+    animation: 1.5s ease-out 0s 1 rightParagraphFade;
 }
 
 .text-header1 {
@@ -68,7 +116,8 @@ body {
     font-family: "Roboto";
     font-weight: 100;
     font-size: 36px;
-    float:center;
+    float: center;
+    text-align: center;
 }
 
 #header1-1 {
@@ -136,6 +185,36 @@ body {
         transform: translateY(100%);
     }
     100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes leftParagraphFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes rightParagraphFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
         transform: translateY(0%);
     }
 }
