@@ -24,10 +24,21 @@ body {
     animation: 0.5s ease-out 0s 1 fadeIn;
 }
 
-/*  Animations */
+.card-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30vh;
+}
 
-.navbar-icon:hover {
-    transform: rotate(90deg);
+.project-card {
+    background-color: #323232;
+    width: 20vw;
+    height: 25vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    border-radius: 30px;
 }
 
 /* Keyframes */
