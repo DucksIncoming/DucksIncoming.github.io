@@ -10,9 +10,10 @@ body {
 .links-title {
     animation-delay: 1s;
     height: 40vh;
-    width: 50vw;
-    position: relative;
-    margin-top: 5vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
 

@@ -29,13 +29,13 @@ body {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 30vh;
+    top: 20vh;
 }
 
 .project-card {
     background-color: #323232;
     width: 20vw;
-    height: 25vw;
+    height: 30vw;
     margin-right: 2vw;
     margin-left: 2vw;
     border-radius: 30px;

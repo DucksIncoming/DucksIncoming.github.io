@@ -1,0 +1,161 @@
+body {
+    background-image: url("Assets/Contact/contact_bg.png");
+    background-size: cover;
+    overflow: hidden;
+}
+
+::placeholder {
+    color: #bdbdbd;
+    font-size: 1.5vw;
+    font-family: "Roboto";
+    font-weight: 400; 
+}
+
+.contact-header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -7%;
+    left: 0;
+
+    animation: 0.5s ease-out 0s 1 titleDropDown;
+}
+
+.confirm-banner {
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(59, 172, 44);
+    display: flex;
+    justify-content: left;
+    opacity: 0;
+}
+
+.banner-x {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Roboto";
+    font-size: 3vh;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 5vh;
+    height: 5vh;
+    margin-bottom: 0;
+    margin-top: 0.5vh;
+    text-align: center;
+}
+
+.banner-x:hover {
+    background-color:rgb(85, 202, 70);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.confirm-text {
+    color: white;
+    font-family: "Roboto";
+    font-size: 3vh;
+    margin-top: 1.25vh;
+}
+
+.contact-title {
+    color: white;
+    font-family: "Roboto";
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 100;
+    z-index: 1;
+}
+
+.form-container {
+    padding-top: 1vw;
+    width: 50vw;
+    height: 72vh;
+    position: absolute;
+    top: 59%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #15131a;
+    display: block;
+    border: 0.5vw white solid;
+    
+
+    animation: 1s ease-in-out 0s 1 formSlideUp;
+}
+
+.input-box {
+    margin-left: 4vw;
+    margin-right: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 2.5vh;
+    width: 40vw;
+    height: 6vh;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px rgb(129, 129, 129) solid;
+    padding: 10px;
+    color: white;
+    font-size: 1.5vw;
+    font-family: "Roboto";
+    font-weight: 400; 
+}
+
+.input-box:focus {
+    background-color: #6c5d8c70;
+    border-bottom: 4px white solid;
+}
+
+.send-button {
+    margin-top: 2.5vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 8vh;
+    background-color:rgb(95, 95, 95);
+    color: black;
+    font-size: 2vw;
+    font-family: "Roboto";
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    transition-duration: 0.25s;
+}
+
+.send-button:hover {
+    background-color: rgb(59, 172, 44);
+    color: white;
+    border: 2px white solid;
+}
+
+@keyframes titleDropDown{
+    0%{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+@keyframes formSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(100%);
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
