@@ -16,14 +16,14 @@
 
     <form class="form-container" id="contact-form">
       <input class="input-box" id="name-input" placeholder="Name*" required>
-      <input class="input-box" id="email-input" placeholder="E-mail*" required>
+      <input class="input-box" id="email-input" placeholder="E-mail*" required type="email">
       <input class="input-box" id="org-input" placeholder="Organization (Opt.)">
-      <input class="input-box" id="msg-input" placeholder="Message*" required>
+      <textarea rows="2" cols="50" class="msg-box" id="msg-input" placeholder="Message*" required></textarea>
 
       <button type="submit" class="send-button" onsubmit="send()">Send</button>
     </form>
 
-    <div class="confirm-banner">
+    <div class="confirm-banner" id="confirm-banner">
       <button class="banner-x" onclick="closeBanner();">X</button>
       <p class="confirm-text">Message sent successfully!</p>
     </div>
