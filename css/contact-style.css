@@ -158,6 +158,10 @@ body {
     border: 2px white solid;
 }
 
+@media (max-width: 1000px){
+
+}
+
 @keyframes titleDropDown{
     0%{
         opacity: 0;
