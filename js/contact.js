@@ -6,13 +6,12 @@ sendButton = document.getElementById("send-button")
 confirmBanner = document.getElementById("confirm-banner");
 form = document.getElementById("contact-form");
 
-function handleForm(event) { 
-    event.preventDefault(); 
-}
+$('#send-button').click(function () {
+    send();
+    return false;
+   });
 
 function send() {
-    form.addEventListener('submit', handleForm);
-    
     confirmBanner.style.opacity = "1";
     confirmBanner.transform = "translateY(0%)";
     name.value = "";

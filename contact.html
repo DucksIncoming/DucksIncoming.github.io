@@ -8,6 +8,7 @@
     <link href="css/contact-style.css" rel="stylesheet"about-style.css" rel="stylesheet" type="text/css" />
     <link href="css/navbar.css" rel="stylesheet"navbar.css" rel="stylesheet" type="text/css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="contact-header">
@@ -15,12 +16,12 @@
     </div>
 
     <form class="form-container" id="contact-form">
-      <input class="input-box" id="name-input" placeholder="Name*" required>
-      <input class="input-box" id="email-input" placeholder="E-mail*" required type="email">
-      <input class="input-box" id="org-input" placeholder="Organization (Opt.)">
-      <textarea rows="2" cols="50" class="msg-box" id="msg-input" placeholder="Message*" required></textarea>
+      <input class="input-box" id="name-input" placeholder="Name*" autocomplete="name" required>
+      <input class="input-box" id="email-input" placeholder="E-mail*" autocomplete="email" required type="email">
+      <input class="input-box" id="org-input" placeholder="Organization (Opt.)" autocomplete="organization">
+      <textarea rows="2" cols="50" class="msg-box" id="msg-input" placeholder="Message*" autocomplete="off" required></textarea>
 
-      <button type="submit" class="send-button" onsubmit="send()">Send</button>
+      <button type="submit" class="send-button" id="send-button">Send</button>
     </form>
 
     <div class="confirm-banner" id="confirm-banner">
@@ -54,6 +55,33 @@
     </div>
 
     <img src="css/Assets/Global/logo_simple.png" class="logo-icon" onclick="window.open('home.html', '_self')">
+
+
+    <!-- Firebase Stuff -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDaqG9dbJ3Go7Fm6FyulMd8ENPD9oTki8I",
+        authDomain: "portfolio-contact-c56ec.firebaseapp.com",
+        projectId: "portfolio-contact-c56ec",
+        storageBucket: "portfolio-contact-c56ec.appspot.com",
+        messagingSenderId: "843307005849",
+        appId: "1:843307005849:web:0052f06a822cdcefc88508",
+        measurementId: "G-4J38QGGMKJ"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
 
     <script type="text/javascript" src="js/contact.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
