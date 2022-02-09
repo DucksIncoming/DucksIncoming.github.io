@@ -5,23 +5,31 @@ msg = document.getElementById("msg-input");
 sendButton = document.getElementById("send-button")
 confirmBanner = document.getElementById("confirm-banner");
 form = document.getElementById("contact-form");
+invalidEntry = document.getElementById("invalid-box");
 
-function handleForm(event) { 
-    event.preventDefault(); 
-}
+$('#send-button').click(function () {
+    send();
+    return false;
+   });
 
 function send() {
-    form.addEventListener('submit', handleForm);
-    
-    confirmBanner.style.opacity = "1";
-    confirmBanner.transform = "translateY(0%)";
-    name.value = "";
-    email.value = "";
-    org.value = "";
-    msg.value = "";
+    if (name.value != "" && email.value != "" && msg.value != ""){
+        confirmBanner.style.transitionDuration = "0.5";
+        confirmBanner.style.opacity = "1";
+        confirmBanner.style.transform = "translateY(0%)";
+        name.value = "";
+        email.value = "";
+        org.value = "";
+        msg.value = "";
+        invalidEntry.style.transform = "translateY(-100%)";
+    }
+    else {
+        invalidEntry.style.transform = "translateY(0%)";
+    }
 }
 
 function closeBanner() {
+    confirmBanner.style.transitionDuration = "0.5";
     confirmBanner.style.opacity = "0";
-    confirmBanner.transform = "translateY(100%)";
+    confirmBanner.style.transform = "translateY(100%)";
 }

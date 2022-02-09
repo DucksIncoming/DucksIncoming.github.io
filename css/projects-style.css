@@ -35,13 +35,19 @@ body {
     top: 20vh;
 }
 
-.project-card {
-    background-color: #323232;
+.project-card-rect {
     width: 20vw;
     height: 30vw;
     margin-right: 2vw;
     margin-left: 2vw;
+}
+
+.project-card {
+    background-color: #323232;
     border-radius: 30px;
+    perspective: 300px;
+    top: 0;
+    left: 0;
 }
 
 @media (max-width: 1000px) {

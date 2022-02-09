@@ -8,6 +8,11 @@
     <link href="css/contact-style.css" rel="stylesheet"about-style.css" rel="stylesheet" type="text/css" />
     <link href="css/navbar.css" rel="stylesheet"navbar.css" rel="stylesheet" type="text/css" />
 
+    <script defer src="/__/firebase/9.6.6/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/9.6.6/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="contact-header">
@@ -15,17 +20,28 @@
     </div>
 
     <form class="form-container" id="contact-form">
-      <input class="input-box" id="name-input" placeholder="Name*" required>
-      <input class="input-box" id="email-input" placeholder="E-mail*" required type="email">
-      <input class="input-box" id="org-input" placeholder="Organization (Opt.)">
-      <textarea rows="2" cols="50" class="msg-box" id="msg-input" placeholder="Message*" required></textarea>
+      <input class="input-box" id="name-input" placeholder="Name*" autocomplete="name" required>
+      <input class="input-box" id="email-input" placeholder="E-mail*" autocomplete="email" required type="email">
+      <input class="input-box" id="org-input" placeholder="Organization (Opt.)" autocomplete="organization">
+      <textarea rows="2" cols="50" class="msg-box" id="msg-input" placeholder="Message*" autocomplete="off" required></textarea>
 
-      <button type="submit" class="send-button" onsubmit="send()">Send</button>
+      <button type="submit" class="send-button" id="send-button">Send</button>
     </form>
 
     <div class="confirm-banner" id="confirm-banner">
       <button class="banner-x" onclick="closeBanner();">X</button>
       <p class="confirm-text">Message sent successfully!</p>
+    </div>
+
+    <div class="invalid-box" id="invalid-box">
+      <p class="invalid-text">Invalid Entry</p>
+    </div>
+
+    <div class="text-container">
+      <p class="phone-text">(804) 814-9516</p>
+      <p class="ëmail-text">richardjones.ccps@gmail.com</p>
+
+      <p class="contact-explained">*I am far more likely to respond to an email than a phone call, however I am likely to respond to a text message if you are able to. If you do, please specify that you’re contacting me in regard to my portfolio and your name and organization. Sorry for any inconveniences/late responses.</p>
     </div>
 
     <div id="navbar-icon" class="navbar-icon" onmouseover="navbarOpen();" onmouseout="navbarClose();">
@@ -57,5 +73,7 @@
 
     <script type="text/javascript" src="js/contact.js"></script>
     <script type="text/javascript" src="js/navbar.js"></script>
+
+    
   </body>
 </html>

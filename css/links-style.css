@@ -38,13 +38,13 @@ body {
     font-family: "Roboto";
     font-size: 70px;
     font-weight: 100;
-    margin-top: 10vh;
+    margin-top: 15vh;
     text-align: center;
 }
 
 .background-header {
     background-image: url("Assets/Homepage/blurcode_bg.png");
-    height: 40vh;
+    height: 50vh;
     width: 100vw;
     margin: auto;
     display: flex;
@@ -75,7 +75,7 @@ body {
     color: white;
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.2em;
     text-align: center;
     position: relative;
     transition-duration: 0.25s;
@@ -85,7 +85,7 @@ body {
     color: aquamarine;
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.2em;
     text-decoration: underline;
     text-align: center;
     position: relative;
@@ -96,7 +96,7 @@ body {
         color: white;
         font-family: "Roboto";
         font-weight: 400;
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
         position: relative;
         transition-duration: 0.25s;
@@ -106,7 +106,7 @@ body {
         color: aquamarine;
         font-family: "Roboto";
         font-weight: 400;
-        font-size: 0.8rem;
+        font-size: 0.8em;
         text-decoration: underline;
         text-align: center;
         position: relative;
