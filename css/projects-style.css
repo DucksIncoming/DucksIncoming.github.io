@@ -35,19 +35,23 @@ body {
     top: 20vh;
 }
 
-.project-card-rect {
-    width: 20vw;
-    height: 30vw;
-    margin-right: 2vw;
-    margin-left: 2vw;
-}
-
 .project-card {
     background-color: #323232;
     border-radius: 30px;
     perspective: 300px;
+    width: 20vw;
+    height: 30vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
     top: 0;
     left: 0;
+}
+
+.card-background-title {
+    color: white;
+    opacity: 0;
+    font-family: "Roboto";
+    z-index: 9999;
 }
 
 @media (max-width: 1000px) {

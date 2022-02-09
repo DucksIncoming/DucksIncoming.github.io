@@ -1,7 +1,7 @@
-name = document.getElementById("name-input");
-email = document.getElementById("email-input");
-org = document.getElementById("org-input");
-msg = document.getElementById("msg-input");
+nameBox = document.getElementById("name-input");
+emailBox = document.getElementById("email-input");
+orgBox = document.getElementById("org-input");
+msgBox = document.getElementById("msg-input");
 sendButton = document.getElementById("send-button")
 confirmBanner = document.getElementById("confirm-banner");
 form = document.getElementById("contact-form");
@@ -13,14 +13,14 @@ $('#send-button').click(function () {
    });
 
 function send() {
-    if (name.value != "" && email.value != "" && msg.value != ""){
+    if (nameBox.value != "" && emailBox.value != "" && msgBox.value != ""){
         confirmBanner.style.transitionDuration = "0.5";
         confirmBanner.style.opacity = "1";
         confirmBanner.style.transform = "translateY(0%)";
-        name.value = "";
-        email.value = "";
-        org.value = "";
-        msg.value = "";
+        nameBox.value = "";
+        emailBox.value = "";
+        orgBox.value = "";
+        msgBox.value = "";
         invalidEntry.style.transform = "translateY(-100%)";
     }
     else {
