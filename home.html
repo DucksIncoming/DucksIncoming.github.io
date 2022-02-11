@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="css/Assets/Global/favicon_white.png">
     <link href="css/home-style.css" rel="stylesheet"home-style.css" rel="stylesheet" type="text/css" />
     <link href="css/navbar.css" rel="stylesheet"navbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet"footer.css" rel="stylesheet" type="text/css" />
 
   </head>
   <body>
@@ -29,16 +30,25 @@
             <img id="projects-icon" class="projects-icon" src="css/Assets/Global/projects_icon.png">
             <p class="projects-text" id="projects-text">Projects</p>
           </div>
-          <div id="links-button" class="links-button" onmouseenter="linksHover()" onmouseleave="linksUnhover()" onclick="openLinks()">
-            <img id="links-icon" class="links-icon" src="css/Assets/Global/links_icon.png">
-            <p class="links-text" id="links-text">Links</p>
-          </div>
           <div id="contact-button" class="contact-button" onmouseenter="contactHover()" onmouseleave="contactUnhover()" onclick="openContact()">
             <img id="contact-icon" class="contact-icon" src="css/Assets/Global/contact_icon.png">
             <p class="contact-text" id="contact-text">Contact</p>
           </div>
         </div>
     </div>
+
+    <div class="footer-container">
+      <img src="css/Assets/Global/Link Icons/github.png" class="link-image" id="link-github" onclick="window.open(href='https://github.com/DucksIncoming/', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/discord.png" class="link-image" id="link-discord" onclick="window.open(href='https://discord.gg/Gbxrz6mxhq', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/youtube.png" class="link-image" id="link-youtube" onclick="window.open(href='https://www.youtube.com/channel/UCwgpVWzXKdMB-kHblUzMsLg', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/twitter.png" class="link-image" id="link-twitter" onclick="window.open(href='https://twitter.com/ducksincoming', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/linktree.png" class="link-image" id="link-linktree" onclick="window.open(href='https://linktr.ee/ducksincoming', target='_blank')">
+
+      <div class="flex-break"></div>
+
+      <p class="copyright-disclaimer">© Copyright 2022, Ricky Jones, DucksIncoming. All rights reserved.</p>
+    </div>
+
     <script type="text/javascript" src="js/navbar.js"></script> 
   </body>
 </html>

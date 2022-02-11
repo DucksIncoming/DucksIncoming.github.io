@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="css/Assets/Global/favicon_white.png">
     <link href="css/projects-style.css" rel="stylesheet"projects-style.css" rel="stylesheet" type="text/css" />
     <link href="css/navbar.css" rel="stylesheet"navbar.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet"footer.css" rel="stylesheet" type="text/css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -15,13 +16,25 @@
     </div>
     <div class="card-container">
         <div class="project-card" data-tilt data-tilt-glare="true" data-tilt-scale="1.1" data-tilt-max-glare="0.2">
-          <p class="card-background-title">TASER CHESS</p>
+          <div class="background-text-container">
+            <p class="card-background-title">TASER CHESS TASER CHESS TASER CHESS</p>
+          </div>
+          <p class="card-title">TASER CHESS</p>
+          <img class="card-graphic" src="css/Assets/Projects/morse-tapper.png" />
         </div>
         <div class="project-card" data-tilt data-tilt-glare="true" data-tilt-scale="1.1" data-tilt-max-glare="0.2">
-          <p class="card-background-title">MORSE TAPPER</p>
+          <div class="background-text-container">
+            <p class="card-background-title">MORSE TAPPER MORSE TAPPER MORSE TAPPER</p>
+          </div>
+          <p class="card-title">MORSE TAPPER</p>
+          <img class="card-graphic" src="css/Assets/Projects/morse-tapper.png" />
         </div>
         <div class="project-card" data-tilt data-tilt-glare="true" data-tilt-scale="1.1" data-tilt-max-glare="0.2">
-          <p class="card-background-title">WEEPING ANGEL</p>
+          <div class="background-text-container">
+            <p class="card-background-title">WEEPING ANGEL WEEPING ANGEL WEEPING ANGEL</p>
+          </div>
+          <p class="card-title">WEEPING ANGEL</p>
+          <img class="card-graphic" src="css/Assets/Projects/morse-tapper.png" />
         </div>
     </div>
         
@@ -41,10 +54,6 @@
             <img id="projects-icon" class="projects-icon" src="css/Assets/Global/projects_icon.png">
             <p class="projects-text" id="projects-text">Projects</p>
           </div>
-          <div id="links-button" class="links-button" onmouseenter="linksHover()" onmouseleave="linksUnhover()" onclick="openLinks()">
-            <img id="links-icon" class="links-icon" src="css/Assets/Global/links_icon.png">
-            <p class="links-text" id="links-text">Links</p>
-          </div>
           <div id="contact-button" class="contact-button" onmouseenter="contactHover()" onmouseleave="contactUnhover()" onclick="openContact()">
             <img id="contact-icon" class="contact-icon" src="css/Assets/Global/contact_icon.png">
             <p class="contact-text" id="contact-text">Contact</p>
@@ -52,6 +61,18 @@
         </div>
     <img src="css/Assets/Global/logo_simple.png" class="logo-icon" onclick="window.open('home.html', '_self')">
     
+    <div class="footer-container">
+      <img src="css/Assets/Global/Link Icons/github.png" class="link-image" id="link-github" onclick="window.open(href='https://github.com/DucksIncoming/', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/discord.png" class="link-image" id="link-discord" onclick="window.open(href='https://discord.gg/Gbxrz6mxhq', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/youtube.png" class="link-image" id="link-youtube" onclick="window.open(href='https://www.youtube.com/channel/UCwgpVWzXKdMB-kHblUzMsLg', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/twitter.png" class="link-image" id="link-twitter" onclick="window.open(href='https://twitter.com/ducksincoming', target='_blank')">
+      <img src="css/Assets/Global/Link Icons/linktree.png" class="link-image" id="link-linktree" onclick="window.open(href='https://linktr.ee/ducksincoming', target='_blank')">
+
+      <div class="flex-break"></div>
+
+      <p class="copyright-disclaimer">© Copyright 2022, Ricky Jones, DucksIncoming. All rights reserved.</p>
+    </div>
+
     <script type="text/javascript" src="js/projects.js"></script> 
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/jquery.fittext.js"></script>

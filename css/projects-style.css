@@ -3,8 +3,8 @@
 body {
     background-color: #1e1e1e;
     margin: 0;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -33,6 +33,18 @@ body {
     justify-content: center;
     position: absolute;
     top: 20vh;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+}
+
+.background-text-container {
+    border-radius: 30px;
+    width: 20vw;
+    height: 30vw;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition-duration: 0.5s;
 }
 
 .project-card {
@@ -41,17 +53,55 @@ body {
     perspective: 300px;
     width: 20vw;
     height: 30vw;
-    margin-right: 2vw;
-    margin-left: 2vw;
+    margin-left: 2%;
+    margin-right: 2%;
     top: 0;
     left: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition-duration: "2s";
+    transform: perspective(1000px);
+}
+
+.card-title {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 900px;
+    text-align: center;
+    font-size: 4vw;
+    opacity: 1;
+    position: absolute;
+    top: 60%;
+    z-index: 5;
+    left: 0;
+    transform: translateZ(50px);
 }
 
 .card-background-title {
     color: white;
-    opacity: 0;
+    opacity: 0.05;
     font-family: "Roboto";
-    z-index: 9999;
+    font-weight: 900;
+    font-style: italic;
+    z-index: 1;
+    margin-left: 0;
+    margin-top: -10%;
+    text-align: center;
+    transition-duration: 0.5s;
+    transform: translateX(-5%);
+}
+
+.card-background-title:hover {
+    opacity: 0.05;
+}
+
+.card-graphic {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    transform: translateZ(0px);
 }
 
 @media (max-width: 1000px) {

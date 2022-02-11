@@ -3,7 +3,8 @@
 body {
     background-color: #1e1e1e;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .logo {

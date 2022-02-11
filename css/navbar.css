@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .navbar-icon {
     background-image: url("Assets/Global/navbar_icon.png");
     background-size: 45px 38px;
@@ -62,26 +65,13 @@
     transition-duration: 0.25s;
 }
 
-.links-text {
-    color: white;
-    font-family: "Roboto";
-    font-weight: 100;
-    font-size: 24px;
-    position: absolute;
-    top: 210;
-    left: 75px;
-    opacity: 0;
-
-    transition-duration: 0.25s;
-}
-
 .contact-text {
     color: white;
     font-family: "Roboto";
     font-weight: 100;
     font-size: 24px;
     position: absolute;
-    top: 100;
+    top: 210;
     left: 75px;
     opacity: 0;
 
@@ -109,13 +99,6 @@
     transition-duration: 0.1s;
     cursor: pointer;
 }
-.links-button {
-    width: 250px;
-    height: 70px;
-    background-color: transparent;
-    transition-duration: 0.1s;
-    cursor: pointer;
-}
 .contact-button {
     width: 250px;
     height: 70px;
@@ -133,9 +116,7 @@
 .projects-button:hover {
     background-color: #1e1e1ea4;
 }
-.links-button:hover {
-    background-color: #1e1e1ea4;
-}
+
 .contact-button:hover {
     background-color: #1e1e1ea4;
 }
@@ -161,17 +142,10 @@
     left: 5px;
 }
 
-.links-icon {
-    width: 60px;
-    position: absolute;
-    top: 215px;
-    left: 5px;
-}
-
 .contact-icon {
     width: 60px;
     position: absolute;
-    top: 295px;
+    top: 225px;
     left: 5px;
 }
 

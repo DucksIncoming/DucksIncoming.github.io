@@ -6,7 +6,6 @@ navIcon = document.getElementById("navbar-icon");
 homeText = document.getElementById("home-text");
 aboutText = document.getElementById("about-text");
 projectsText = document.getElementById("projects-text");
-linksText = document.getElementById("links-text");
 contactText = document.getElementById("contact-text");
 
 function navbarOpen() {
@@ -51,15 +50,6 @@ function projectsHover() {
 function projectsUnhover() {
     projectsText.style.transitionDuration = "0.5";
     projectsText.style.opacity = 0;
-}
-
-function linksHover() {
-    linksText.style.transitionDuration = "0.5";
-    linksText.style.opacity = 1;
-}
-function linksUnhover() {
-    linksText.style.transitionDuration = "0.5";
-    linksText.style.opacity = 0;
 }
 
 function contactHover() {
