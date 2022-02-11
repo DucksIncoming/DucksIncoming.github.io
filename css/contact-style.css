@@ -106,9 +106,9 @@ body {
     top: 400px;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: #15131a;
+    background-color: #252425;
     display: block;
-    border: 5px white solid;
+    border: 1px white solid;
     
 
     animation: 1s ease-in-out 0s 1 formSlideUp;
@@ -151,12 +151,12 @@ body {
 }
 
 .input-box:focus {
-    background-color: #6c5d8c70;
+    background-color: #68686870;
     border-bottom: 4px white solid;
 }
 
 .msg-box:focus {
-    background-color: #6c5d8c70;
+    background-color: #68686870;
     border-bottom: 4px white solid;
 }
 

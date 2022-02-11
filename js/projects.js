@@ -24,7 +24,5 @@ $(document).ready(function(){
         $(this).children(".card-title").css("filter", "none");
     });
 
-    $(".background-text-container").fitText(0.3);
-
     VanillaTilt.init(document.querySelectorAll(".project-card"))
 }); 
