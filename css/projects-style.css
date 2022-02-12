@@ -61,6 +61,7 @@ body {
     transform: translateY(-100%);
     transition-duration: "2s";
     transform: perspective(1000px);
+    cursor: pointer;
 }
 
 .card-title {
