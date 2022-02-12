@@ -77,6 +77,13 @@ body {
     transform: translateZ(50px);
 }
 
+.projects-title {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 3vw;
+}
+
 .card-background-title {
     color: white;
     opacity: 0.05;
