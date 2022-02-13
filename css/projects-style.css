@@ -57,11 +57,12 @@ body {
     margin-right: 2%;
     top: 0;
     left: 0;
-    opacity: 0;
-    transform: translateY(-100%);
-    transition-duration: "2s";
+    opacity: 1;
+    transform: translateY(600%);
+    transition-duration: "0.2s";
     transform: perspective(1000px);
     cursor: pointer;
+
 }
 
 .card-title {
@@ -113,7 +114,19 @@ body {
     transform: translateZ(0px);
 }
 
+.projects-resize-break {
+    width: 100vw;
+    height: 0;
+    margin-left: 0;
+    margin-top: 0;
+}
+
 @media (max-width: 1000px) {
+
+    .projects-resize-break {
+        height: 100vh;
+    }
+    
     .background-header {
         background-image: url("Assets/Projects/projects-background.png");
         height: 100vh;
@@ -134,16 +147,44 @@ body {
         left: 0;
         top: 15vh;
         scroll-snap-type: x mandatory;
+        
     }
     
     .project-card {
         background-color: #323232;
-        width: 70vw;
+        width: 50vw;
         height: 70vh;
-        margin-left: 15vw;
-        margin-right: 15vw;
+        max-height: 80vw;
+        margin-left: 25vw;
+        margin-right: 25vw;
         border-radius: 30px;
         scroll-snap-align: start;
+    }
+
+    .background-text-container {
+        border-radius: 30px;
+        width: 50vw;
+        height: 70vh;
+        top: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition-duration: 0.5s;
+        max-height: 80vw;
+    }
+
+    .card-background-title {
+        color: white;
+        opacity: 0.05;
+        font-family: "Roboto";
+        font-weight: 900;
+        font-style: italic;
+        z-index: 1;
+        font-size: 15vw;
+        margin-left: 0;
+        margin-top: -10%;
+        text-align: center;
+        transition-duration: 0.5s;
+        transform: translateX(-5%);
     }
 }
 
