@@ -144,7 +144,7 @@ body {
         font-family: "Roboto";
         font-weight: 400;
         font-size: 1rem;
-        max-width: 40ch;
+        max-width: 30ch;
         margin-left: calc(50vw - 40ch);
         text-align: left;
     }
@@ -163,7 +163,7 @@ body {
         font-family: "Roboto";
         font-weight: 400;
         font-size: 1rem;
-        max-width: 40ch;
+        max-width: 30ch;
         margin-right: calc(50vw - 40ch);
         text-align: right;
     }
