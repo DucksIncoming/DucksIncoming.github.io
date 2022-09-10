@@ -17,17 +17,17 @@ body {
 }
 
 .background-header {
-    background-image: url("Assets/Projects/projects-background.png");
-    height: 100vh;
+    background-image: url("Assets/Projects/Backgrounds/projects-background.png");
+    height: 180vh;
     width: auto;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     display: flex;
     justify-content: center;
     animation: 0.5s ease-out 0s 1 fadeIn;
 }
 
-.card-container {
+.card-container-1 {
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -35,6 +35,18 @@ body {
     top: 20vh;
     transition-duration: 1s;
     transform-style: preserve-3d;
+    z-index: 2;
+}
+
+.card-container-2 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90vh;
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+    z-index: 1;
 }
 
 .background-text-container {
@@ -84,6 +96,18 @@ body {
     font-family: "Roboto";
     font-weight: 100;
     font-size: 3vw;
+}
+
+.projects-subtitle {
+    color: white;
+    font-family: "Roboto";
+    font-weight: 100;
+    font-size: 1vw;
+    text-align: center;
+}
+
+.portfolio-link {
+    color: lightskyblue;
 }
 
 .card-background-title {
@@ -146,7 +170,6 @@ body {
         position: absolute;
         left: 0;
         top: 15vh;
-        scroll-snap-type: x mandatory;
         
     }
     
@@ -167,6 +190,7 @@ body {
         height: 70vh;
         top: 0;
         opacity: 0;
+        text-align: center;
         overflow: hidden;
         transition-duration: 0.5s;
         max-height: 80vw;
