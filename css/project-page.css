@@ -1,0 +1,141 @@
+body {
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+}
+
+.background-header {
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 25vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 3vh solid #151515;
+}
+
+.body-content {
+    width: 100vw;
+    height: auto;
+    background-color: #1e1e1e;
+}
+
+.project-title {
+    font-size: 4vw;
+    font-family: roboto;
+    color: white;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+.project-subtitle {
+    font-size: 1.5vw;
+    font-family: roboto;
+    color: white;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-style: italic;
+}
+
+.project-status {
+    font-size: 1.5vw;
+    font-family: roboto;
+    color: white;
+    position: relative;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+
+.information-chunk {
+    width: 100vw;
+    height: 50vh;
+    background-color: #1e1e1e;
+}
+
+.text-box-left {
+    width: 45vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: white;
+    font-family: roboto;
+    float: left;
+    padding: 0.5vw;
+    text-align: left;
+}
+
+.text-box-right {
+    width: 45vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    color: white;
+    font-family: roboto;
+    float: left;
+    padding: 0.5vw;
+    text-align: right;
+}
+
+.section-title {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.section-body {
+    font-size: 1.5vw;
+}
+
+.image-box {
+    float: left;
+    width: 45vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+.project-img {
+    width: 49%;
+    margin: 0.5%;
+    height: auto;
+    display: inline-block;
+}
+
+.resource-box {
+    width: 35vw;
+    margin-right: 15vh;
+    height: 20vw;
+    float: left;
+}
+
+.github-resource {
+    width: 35vw;
+    height: 20vw;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition-duration: 0.25s;
+    cursor: pointer;
+}
+
+.resource-chunk {
+    width: 100vw;
+    height: 50vh;
+    margin-top: 100vh;
+    margin-left: 10vw;
+    background-color: #1e1e1e;
+}
+
+.github-resource:hover {
+    opacity: 1;
+}

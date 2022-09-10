@@ -26,7 +26,7 @@ body {
 
 .invalid-box {
     background-color: #ff4a4a;
-    border-radius: 00px 0px 0px 20px;
+    border-radius: 0px 0px 0px 20px;
     position: fixed;
     right: 0;
     top: 0;
@@ -57,6 +57,7 @@ body {
     transform: translateY(100%);
     opacity: 0;
     z-index: 3;
+    transition-duration: 0.5s;
 }
 
 .banner-x {
@@ -109,9 +110,6 @@ body {
     background-color: #252425;
     display: block;
     border: 1px white solid;
-    
-
-    animation: 1s ease-in-out 0s 1 formSlideDown;
 }
 
 .input-box {
@@ -177,9 +175,9 @@ body {
 }
 
 .send-button:hover {
-    background-color: rgb(59, 172, 44);
+    background-color: rgb(108, 125, 106);
     color: white;
-    border: 2px white solid;
+    border: 1px white solid;
 }
 
 
