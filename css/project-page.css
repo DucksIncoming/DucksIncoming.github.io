@@ -11,6 +11,9 @@ body {
 
 .background-image {
     position: absolute;
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
     top: 0;
     left: 0;
     border-bottom: 3vh solid #151515;
@@ -58,7 +61,7 @@ body {
 
 .information-chunk {
     width: 100vw;
-    height: 50vh;
+    height: 30vw;
     background-color: #1e1e1e;
 }
 
@@ -128,10 +131,14 @@ body {
     cursor: pointer;
 }
 
+.breakpoint {
+    width: 100vw;
+    height: 10vh;
+    margin-top: 10vw;
+}
+
 .resource-chunk {
     width: 100vw;
-    height: 50vh;
-    margin-top: 100vh;
     margin-left: 10vw;
     background-color: #1e1e1e;
 }
