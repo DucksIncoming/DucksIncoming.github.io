@@ -11,10 +11,10 @@
     </head>
     <body>
         <div class="background-header">
-            <img src="css/Assets/Projects/Backgrounds/morse-tapper-bg.png" class="background-image">
+            <img src="css/Assets/Projects/Backgrounds/cheaplisafe-bg.png" class="background-image">
             <p class="project-title">Cheaplisafe Home Security</p>
-            <p class="project-subtitle">A mechanism to translate speech into tapped morse code.</p>
-            <p class="project-status">Project Status: Completed (Jan 28, 2022) </p>
+            <p class="project-subtitle">Home security made cheap.</p>
+            <p class="project-status">Project Status: Completed (Jul 19, 2022)</p>
 
             <div id="navbar-icon" class="navbar-icon" onmouseover="navbarOpen();" onmouseout="navbarClose();">
             </div>
@@ -42,49 +42,75 @@
         <div class="information-chunk">
             <div class="text-box-left">
                 <p class="section-title">Objective</p>
-                <p class="section-body">Construct and program a mechanism that translates speech spoken into a microphone into understandable morse code tapped
-                     on the arm of the person wearing the mechanism. This project could have applications for people who are hard of hearing, deaf, or have 
-                     trouble processing speech as it is spoken, especially as it does not require other speakers to understand a separate form of communication 
-                     such as sign language. It’s performance is dependent primarily on its ease of use and reliability.
+                <p class="section-body">The objective of this project was to recreate several real security devices in a low-cost, yet effective manner. The 
+                    components made for this project were drawn from the Simplisafe product catalog, which included an entry sensor, panic button, glass break 
+                    sensor, motion sensor, central unit, and keypad alarm disable. These components taken together were $294.87 cheaper than purchasing those 
+                    components from the Simplisafe website.
                 </p>
             </div>
             <div class="image-box">
-                <img class="project-img" src="css/Assets/Projects/Morse Tapper/img2.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img1.png">
             </div>
         </div>
 
 
         <div class="information-chunk">
             <div class="image-box">
-                <img class="project-img" src="css/Assets/Projects/Morse Tapper/img4.png">
-                <img class="project-img" src="css/Assets/Projects/Morse Tapper/img5.png">
-                <img class="project-img" src="css/Assets/Projects/Morse Tapper/img3.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img2.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img3.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img4.png">
             </div>
             <div class="text-box-right">
                 <p class="section-title">Technical Explanation</p>
                 <p class="section-body">
-                    This project was made using Python and Visual Studio Code. In order to produce the results expected, there are three primary components that 
-                    must be considered and fabricated. The first of these components is the speech recognition module. In order to translate the speech spoken 
-                    into the microphone into morse code, the spoken speech must first be converted into text for the computer to parse. Using the Google Cloud’s 
-                    speech recognition API, along with a Python library that allows easy access to its functionality, this component can be implemented after some 
-                    settings are tweaked. 
+                    This project was unique as there were a number of different components that needed to be created, each bringing their own unique challenges. 
+                    The security system, named Cheaplisafe, is incredibly dependent on two components: the FS1000A 433MHz wireless transmitter and the XY-MK-5V 
+                    wireless receiver modules. These two components allow for wireless communication between each of the systems using the RadioHead arduino library 
+                    for communication handling. The system is reliant on these components for data transmission between each element of the system as it would not be 
+                    practical or secure to have all six components hardwired together. 
                 </p>
                 <p class="section-body">
-                    The second component is the morse code translator that translates the speech from the microphone into morse code. Because morse code operates 
-                    using individual letters rather than entire words, a function that intakes a single character and returns the morse code equivalent can be 
-                    implemented for each individual character of the returned speech from the speech recognition module. 
-                </p>
-                <p class="section-body">
-                    Finally, the physical tapping mechanism must be built as the final component. The tapping mechanism is built using an arduino nano with a 
-                    breadboard that is connected to a SG90 servo motor. This motor receives commands from the Python program dictating the position it must rotate 
-                    to. The morse code output from the morse code translator can be passed into a handler function that dictates the timings for the servo motor 
-                    given standard morse code timing and a global variable that alters its overall speed while retaining the proportional differences in certain 
-                    timings. Finally, using the pyfirmata library to interface with the microcontroller, these commands and timings can be sent to the morse code 
-                    tapper. Following this, the tapper mechanism can be mounted to the arm of a wearer and the project will be fully functional.
+                    A 173mm antenna was soldered to each of these wireless modules to increase their range and reliability. The first component to create was the central 
+                    unit, which was responsible for receiving commands from other systems and activating an alarm. A multifunction button was also added for sending 
+                    commands out to the other system components for opportunities for expansion into the future, however it was not used in this application. The alarm 
+                    consisted of an active buzzer attached to the pin of an Arduino Nano 3.0, with a wireless transmitter/receiver pair for sending and receiving commands. 
+                    The central unit has two alarm modes which are dictated by the component sending the alarm command, either “on_t” which activates the alarm only for a 
+                    short period, and “on_p” which activates the alarm permanently until it is disabled by the keypad. 
                 </p>
             </div>
         </div>
 
+        <div class="information-chunk">
+            <div class="image-box">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img5.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img6.png">
+            </div>
+            <div class="text-box-right">
+                <p class="section-body">
+                    The second component made was the entry sensor module. Using an HC-SR04 ultrasonic distance sensor, the distance between the module and the nearest solid 
+                    surface can be determined. Using this, an expected value range can be programmed into the entry sensor. The module is then mounted to the door. Once this 
+                    range is exceeded, such as when the door is opened and the distance to the nearest solid object changes, the system sends a command to the central unit to 
+                    activate the alarm. 
+                </p>
+                <p class="section-body">
+                    The third component created was the panic button. This consisted of a push button wired as an input into the arduino, and thus when it is pushed the 
+                    alarm command is sent. 
+                </p>
+                <p class="section-body">
+                    The fourth component created was the motion sensor, creating using a HC-SR501 motion sensor module. When the motion sensor detects changes in the infrared 
+                    signature within its line of sight, the arduino will send the alarm command. 
+                </p>
+                <p class="section-body">
+                    The fifth component is the glass break sensor, created using a KY-037 sound sensor. After running a mathematical evaluation of the voltage read by the arduino 
+                    from the sound sensor, converted into decibels, the alarm is activated if the reading is above a threshold of 90 dB. 
+                </p>
+                <p class="section-body">
+                    Finally, the keypad was created using a membrane keypad module. Each keypress is saved on the arduino and added to a string, then transmits the saved code once the 
+                    pound symbol is pressed. The central unit then checks this code against its saved password reference and disables the alarm if it is correct. Each of these modules
+                     were tested individually for their functionality because multiple components were reused between modules. 
+                </p>
+            </div>
+        </div>
 
         <div class="information-chunk">
             <div class="text-box-left">
@@ -98,14 +124,18 @@
                 </p>
             </div>
             <div class="image-box">
-                <img class="project-img" src="css/Assets/Projects/Morse Tapper/img1.png">
+                <img class="project-img" src="css/Assets/Projects/Cheaplisafe/img7.png">
             </div>
         </div>
 
+        <div class="breakpoint"></div>
+        <div class="breakpoint"></div>
+        <div class="breakpoint"></div>
+        <div class="breakpoint"></div>
 
         <div class="resource-chunk">
             <div class="resource-box">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qH0tIJhcZxY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="resource-box">
