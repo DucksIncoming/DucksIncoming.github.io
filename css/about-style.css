@@ -12,8 +12,21 @@ body {
     background-image: url("Assets/Homepage/blurcode_bg.png");
     background-size: cover;
     position: fixed;
+    z-index: 0;
     width: 100vw;
     height: 60vh;
+}
+
+.content-container {
+    position: absolute;
+    left: 0;
+    top: 35vw;
+}
+
+.img-element {
+    width: 17.5vw;
+    margin: 1vw;
+    display: inline-block;
 }
 
 .about-title {
@@ -30,40 +43,52 @@ body {
     animation: 0.75s ease-out 0s 1 slideFromTop;
 }
 
-.text-container {
+.information-chunk {
     width: 100vw;
-    position: absolute;
-    top: 75vh;
-    left: 0;
+    height: 40vw;
     background-color: #1e1e1e;
+    z-index: 50;
 }
 
-.textbox-left {
+.text-box {
     color: white;
+    width: 40vw;
+    margin: 5vw;
     font-family: "Roboto";
+    float: left;
     font-weight: 400;
     font-size: 1.5rem;
-    max-width: 40ch;
-    margin-left: calc(50vw - 40ch);
     text-align: left;
 }
 
-.text-normal {
+.image-box {
+    width: 40vw;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    margin: 5vw;
+}
+
+.text-left {
     color: white;
     font-family: "Roboto";
     font-weight: 400;
     font-size: 1.5rem;
     display: block;
+    text-align: left;
 }
 
-.textbox-right {
+.text-right {
     color: white;
     font-family: "Roboto";
     font-weight: 400;
     font-size: 1.5rem;
-    max-width: 40ch;
+    display: block;
     text-align: right;
-    margin-right: calc(50vw - 40ch);
 }
 
 .about-title-text {
@@ -96,27 +121,6 @@ body {
     justify-content: center;
 }
 
-.text-container-left {
-    display: flex;
-    justify-content: left;
-    position: relative;
-    width: 50vw;
-    background-color: #1e1e1e;
-
-    animation: 1s ease-out 0s 1 leftParagraphFade;
-}
-
-.text-container-right {
-    display: flex;
-    justify-content: right;
-    position: relative;
-    margin-left: 50%;
-    width: 50%;
-    background-color: #1e1e1e;
-
-    animation: 1.5s ease-out 0s 1 rightParagraphFade;
-}
-
 .text-header1 {
     color: white;
     font-family: "Roboto";
@@ -134,52 +138,6 @@ body {
 
 .navbar-icon:hover {
     transform: rotate(90deg);
-}
-
-/* Media Queries */
-
-@media (max-width: 1200px){
-    .textbox-left {
-        color: white;
-        font-family: "Roboto";
-        font-weight: 400;
-        font-size: 1rem;
-        max-width: 30ch;
-        margin-left: calc(50vw - 40ch);
-        text-align: left;
-    }
-    
-    .text-normal {
-        color: white;
-        font-family: "Roboto";
-        font-weight: 400;
-        font-size: 1rem;
-
-        display: block;
-    }
-    
-    .textbox-right {
-        color: white;
-        font-family: "Roboto";
-        font-weight: 400;
-        font-size: 1rem;
-        max-width: 30ch;
-        margin-right: calc(50vw - 40ch);
-        text-align: right;
-    }
-
-    .text-container-right {
-        width: 50%;
-        padding: 1vw;
-        margin-left: 50%;
-    }
-
-    .text-container-left {
-        width: 50%;
-        padding: 1vw;
-        margin-left: 0;
-    }
-    
 }
 
 /* Keyframes */
