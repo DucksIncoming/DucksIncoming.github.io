@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabulate</title>
+    <link rel="icon" type="image/x-icon" href="/Tabulate-Icons/favicon.png">
+    <link rel="stylesheet" href="tabulate.css">
+  </head>
+  <body>
+    <input type="image" title="Delete All Course Data" src="Tabulate-Icons/trash-icon.png" class="delete-all-button" id="delete-all-button"></input>
+    <input type="image" title="Add A New Course" src="Tabulate-Icons/plus-icon.png" class="add-new-button" id="add-new-button"></input>
+    <input type="image" title="Save Data to Local Storage" src="Tabulate-Icons/save-icon.png" class="save-data-button" id="save-data-button"></input>
+    <img src="Tabulate-Icons/check-icon.png" class="save-confirmation-image" id="save-confirmation-image">
+
+    <dialog class="add-new-class-dialogue" id="add-new-class-dialogue">
+        <p class="new-class-title">Add New Courses</p>
+
+        <label for="new-class-prefix" class="new-class-label">Course Type (Prefix)</label>
+        <input onchange="updateClassPreview()" type="text", class="new-class-input", id="new-class-prefix" maxlength="4">
+        <label for="new-class-prefix" class="new-class-label">Course Number</label>
+        <input onchange="updateClassPreview()" type="text", class="new-class-input", id="new-class-num" maxlength="3">
+        <label for="new-class-name" class="new-class-label">Course Name/Description</label>
+        <input onchange="updateClassPreview()"  type="text", class="new-class-input", id="new-class-name">
+        <label for="new-class-prefix" class="new-class-label">Credit Hours</label>
+        <input onchange="updateClassPreview()"  type="text", class="new-class-input", id="new-class-hours" maxlength="1">
+        <label for="new-class-prefix" class="new-class-label">Prerequisite Courses (Separated by comma)</label>
+        <textarea onchange="updateClassPreview()"  type="text", class="new-class-multi-input", id="new-class-prerequisites"></textarea>
+        <label for="new-class-prefix" class="new-class-label">Corequisite Courses (Separated by comma)</label>
+        <textarea onchange="updateClassPreview()"  type="text", class="new-class-multi-input", id="new-class-corequisites"></textarea>
+
+        <label for="new-class-category" class="new-class-label">Course Category</label>
+        <br>
+        <select onchange="updateClassPreview()" id="new-class-category" class="category-dropdown">
+            <option value="0">Mathematics</option>
+            <option value="1">Science</option>
+            <option value="2">History</option>
+            <option value="3">Foreign Language</option>
+            <option value="4">Elective</option>
+            <option value="5">General/University</option>
+            <option value="6">Honors/Specialty Course</option>
+            <option value="7">Major Specific</option>
+            <option value="8">Other (Custom Color)</option>
+        </select>
+
+        <div class="new-class-preview" id="new-class-preview" style="background-color: yellow;">
+            <input type="image" src="Tabulate-Icons/x-icon.png" class="class-box-delete"></input>
+            <b class="class-box-text" id="class-preview-prefix-num">[PREFIX] [NUM]</b>
+            <p class="class-box-text" id="class-preview-classname">[CLASSNAME]</p>
+            <p class="class-box-text" id="class-preview-hours">[HOURS] hrs.</p>
+        </div>
+
+        <input type="image" src="Tabulate-Icons/x-icon.png" class="new-class-cancel" id="new-class-cancel">
+        <input type="image" src="Tabulate-Icons/plus-icon.png" class="new-class-add" id="new-class-add"></input>
+    </dialog>
+
+    <dialog class="delete-all-dialogue" id="delete-all-dialogue">
+        <p class="delete-all-dialogue-warning">⚠</p>
+        <p>Are you sure you want to <b>delete all schedule data?</b> (This cannot be undone).</p>
+        <button class="delete-all-dialogue-button" id="delete-all-confirm">Delete</button>
+        <button class="delete-all-dialogue-button" id="delete-all-cancel">Cancel</button>
+    </dialog>
+
+    <dialog class="edit-existing-class-dialogue" id="edit-existing-class-dialogue">
+        <p class="edit-class-title">Edit Existing Course</p>
+
+        <label for="edit-class-prefix" class="edit-class-label">Course Type (Prefix)</label>
+        <input type="text", class="edit-class-input", id="edit-class-prefix" maxlength="4">
+        <label for="edit-class-prefix" class="edit-class-label">Course Number</label>
+        <input type="text", class="edit-class-input", id="edit-class-num" maxlength="3">
+        <label for="edit-class-name" class="edit-class-label">Course Name/Description</label>
+        <input type="text", class="edit-class-input", id="edit-class-name">
+        <label for="edit-class-prefix" class="edit-class-label">Credit Hours</label>
+        <input type="text", class="edit-class-input", id="edit-class-hours" maxlength="1">
+        <label for="edit-class-prefix" class="edit-class-label">Prerequisite Courses (Separated by comma)</label>
+        <textarea type="text", class="edit-class-multi-input", id="edit-class-prerequisites"></textarea>
+        <label for="edit-class-prefix" class="edit-class-label">Corequisite Courses (Separated by comma)</label>
+        <textarea type="text", class="edit-class-multi-input", id="edit-class-corequisites"></textarea>
+
+        <label for="edit-class-category" class="edit-class-label">Course Category</label>
+        <br>
+        <select id="edit-class-category" class="category-dropdown">
+            <option value="0">Mathematics</option>
+            <option value="1">Science</option>
+            <option value="2">History</option>
+            <option value="3">Foreign Language</option>
+            <option value="4">Elective</option>
+            <option value="5">General/University</option>
+            <option value="6">Honors/Specialty Course</option>
+            <option value="7">Major Specific</option>
+            <option value="8">Other (Custom Color)</option>
+        </select>
+
+        <input type="image" src="Tabulate-Icons/x-icon.png" class="edit-class-cancel" id="edit-class-cancel">
+        <input type="image" src="Tabulate-Icons/plus-icon.png" class="edit-class-confirm" id="edit-class-confirm"></input>
+    </dialog>
+
+    <div class="four-year-container">
+        <div class="one-year-container">
+            <div class="semester-container" id="freshman-fall">
+            </div>
+            <div class="semester-container" id="freshman-spring">
+            </div>
+        </div>
+        <div class="one-year-container">
+            <div class="semester-container" id="sophomore-fall">
+            </div>
+            <div class="semester-container" id="sophomore-spring">
+            </div>
+        </div>
+        <div class="one-year-container">
+            <div class="semester-container" id="junior-fall">
+            </div>
+            <div class="semester-container" id="junior-spring">
+            </div>
+        </div>
+        <div class="one-year-container">
+            <div class="semester-container" id="senior-fall">
+            </div>
+            <div class="semester-container" id="senior-spring">
+            </div>
+        </div>
+    </div>
+    <div class="external-credit-container" id="external-credit-container">
+    </div>
+
+	<script src="tabulate.js" defer></script>
+  </body>
+</html>
